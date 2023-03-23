@@ -13,7 +13,7 @@ int main(void)
 
 	sum = 0;
 
-	for (c = 0; c < 10; c++)
+	for (c = 0; c < 1024; c++)
 	{
 		if ((c % 3 == 0) || (c % 5 == 0))
 		{
