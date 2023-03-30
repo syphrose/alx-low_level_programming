@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strncat - concatenates upto n characters from the source
+ * *_strncat - concatenates upto n characters from the source
  *string to the end of the destination
  *@dest: a string
  *@src: a string not to be terminated
