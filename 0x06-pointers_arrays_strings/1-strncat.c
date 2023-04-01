@@ -1,29 +1,22 @@
 #include "main.h"
+#include <stddef.h>
+#include <string.h>
 /**
- * *_strncat - concatenates upto n characters from the source
- *string to the end of the destination
- *@dest: a string
- *@src: a string not to be terminated
- *@n: number of chars to be appended
+ * _strncat - concatenates n characters of the source string to the
+ * end of the destination string
+ * @dest: destination string
+ * @src: source string
+ * @n: maximum number of characters to be concatenated
  *
- * Return: dest
- *
+ * Return: pointer to the resulting string dest
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strncat(char *dest, const char *src, size_t n)
 {
-	int length_of_str, z;
-/* z is a counter for n bytes of src to be concatenated */
-/* length_of_str = length of destination string */
+	size_t dest_len = strlen(dest);
+	size_t i;
 
-	length_of_str = 0;
-	while (dest[length_of_str] != '\0')
-	{
-		length_of_str++;
-	}
-	for (z = 0; z < n && src[z] != '\0'; z++)
-	{
-		dest[length_of_str] = src[z];
-	}
-	dest[length_of_str] = '\0';
-		return (dest);
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[dest_len + i] = src[i];
+	dest[dest_len + i] = '\0';
+	return (dest);
 }
