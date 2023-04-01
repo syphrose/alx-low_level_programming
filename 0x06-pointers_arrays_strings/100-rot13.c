@@ -13,10 +13,9 @@ char *rot13(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-	for (j = 0; (s[i] >= 'a' && s[i] <= 'z') ||
-			(s[i] >= 'A' && s[i] <= 'Z');j++, i++)
-	/* main block of code
-    ..*/
+		for (j = 0; (s[i] >= 'a' && s[i] <= 'z') ||
+			(s[i] >= 'A' && s[i] <= 'Z'); j++, i++)
+		/* main block of code*/
 		{
 			if (j == 2)
 				j = 0;
