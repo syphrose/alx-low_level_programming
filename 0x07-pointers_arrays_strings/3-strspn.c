@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _strspn - gets the length of a prefix substring.
- * @s:the first string to be compared
- * @accept:the second string to compare with
+ * @s: the first string to be compared
+ * @accept: the second string to compare with
  *
  * Return:length
  */
