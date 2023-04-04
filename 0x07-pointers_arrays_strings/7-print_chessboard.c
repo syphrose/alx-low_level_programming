@@ -1,43 +1,27 @@
 #include "main.h"
-#include <stddef.h>
 /**
- * _strstr - locates a substring.
- * @haystack:the string the needle is looked for in
- * @needle: the string containing the substring to be found
+ * print_chessboard - prints chess board
+ * @a:rows
  *
- * Return:pointer to the beginning of substring
- * ,or NULL if the substring is not found
+ * Return: 0
  */
-char *_strstr(char *haystack, char *needle)
+void print_chessboard(char (*a)[8])
 {
-	char *p_haystack = haystack;
-	char *p_needle = needle;
+	int h;
+	/**
+	 * rows
+	 */
+	int v;
+	/**
+	 * column
+	 */
 
-	for (; *p_haystack != '\0'; p_haystack++)
-		/**
-		 *  iterates over the characters in haystack, from the first character.
-		 */
+	for (h = 0; h < 8; h++)
 	{
-		char *temp_haystack = p_haystack;
-		char *temp_needle = p_needle;
-
-		while (*temp_haystack == *temp_needle && *temp_needle != '\0')
-			/**
-			 * iterates over the characters in needle, from the first character.
-			 */
-		{
-			temp_haystack++;
-			temp_needle++;
-		}
-		if (*temp_needle == '\0')
-			/**
-			 * checks if the character pointed to by p_needle is null character ('\0').
-			 * If it is, that means we've found the entire needle string in haystack
-			 */
-		{
-			return (p_haystack);
-		}
+	for (v = 0; v < 8; v++)
+	{
+	_putchar(a[h][v]);
 	}
-	return (NULL);
+	_putchar('\n');
+	}
 }
-
