@@ -5,13 +5,13 @@
  * main - Printing minimum number of coins
  * @argv: vector argument declared
  * @argc: word count arguments
- * @cents: amount of cents to be given back
  * Return: Error if the arg is not 1, otherwise return 1
  *
  */
 int main(int argc, char *argv[])
-	{
-	int cents, sum = 0;
+{
+	int cents;
+	int sum = 0;
 
 	if (argc != 2)
 	{
