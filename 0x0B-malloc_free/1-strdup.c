@@ -10,8 +10,8 @@
  */
 char *_strdup(char *str)
 {
-	char *aaa;
-	int i, c = 0;
+	char *nstr;
+	int i, c;
 
 	if (str == NULL)
 		return (NULL);
@@ -19,11 +19,11 @@ char *_strdup(char *str)
 
 	while (str[i] != '\0')
 		i++;
-	aaa = malloc(sizeof(char) * (i * c));
+	nstr = malloc(sizeof(char) * (i + 1));
 
-	if (aaa == NULL)
+	if (nstr == NULL)
 		return (NULL);
-	for (c = 0; str[c]; c++)
-		aaa[c] = str[c];
-	return (aaa);
+	for (c = 0; c < i; c++)
+		nstr[c] = str[c];
+	return (nstr);
 }
