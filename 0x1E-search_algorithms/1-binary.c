@@ -7,7 +7,7 @@
   * @size: num of elements in the array.
   * @value: value to search for.
   *
-  * Return: -1 if value is absent in array or if array is NULL         
+  * Return: -1 if value is absent in array or if array is NULL
   *
   * Description: Prints the subarray being searched after each change.
   */
