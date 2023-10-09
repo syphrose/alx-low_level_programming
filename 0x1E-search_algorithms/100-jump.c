@@ -23,17 +23,17 @@ int jump_search(int *array, size_t size, int value)
 	step = sqrt(size);
 	for (i = jump = 0; jump < size && array[jump] < value;)
 	{
-		printf("val in array[%ld] = [%d]\n", jump, array[jump]);
+		printf("value in array[%ld] = [%d]\n", jump, array[jump]);
 		i = jump;
 		jump += step;
 	}
 
-	printf("val between index [%ld] and [%ld]\n", i, jump);
+	printf("value between index [%ld] and [%ld]\n", i, jump);
 
 	jump = jump < size - 1 ? jump : size - 1;
 	for (; i < jump && array[i] < value; i++)
-		printf("val in array[%ld] = [%d]\n", i, array[i]);
-	printf("val checked array[%ld] = [%d]\n", i, array[i]);
+		printf("value in array[%ld] = [%d]\n", i, array[i]);
+	printf("value checked array[%ld] = [%d]\n", i, array[i]);
 
 	return (array[i] == value ? (int)i : -1);
 }
